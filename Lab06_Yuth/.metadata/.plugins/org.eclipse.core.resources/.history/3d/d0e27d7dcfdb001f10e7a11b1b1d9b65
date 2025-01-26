@@ -1,0 +1,32 @@
+package main;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class BookManage {
+    private List<Book> books = new ArrayList<>();
+
+    public void addBook(Book book) {
+        books.add(book);
+    }
+
+    public void updateBook(int index, Book book) {
+        if (index >= 0 && index < books.size()) {
+            books.set(index, book);
+        }
+    }
+
+    public void deleteBook(int index) {
+        if (index >= 0 && index < books.size()) {
+            books.remove(index);
+        }
+    }
+
+    public void deleteAllBooks() {
+        books.clear();
+    }
+
+    public List<Book> listAllBooks() {
+        return new ArrayList<>(books);
+    }
+}

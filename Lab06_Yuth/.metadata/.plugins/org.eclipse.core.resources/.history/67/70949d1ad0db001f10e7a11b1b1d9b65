@@ -1,0 +1,51 @@
+package main;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class BookManageTest {
+    private BookManage bookManage = new BookManage();
+
+    @Test
+    public void testAddBook() {
+        Book book = new Book("Title", "Author");
+        bookManage.addBook(book);
+        assertEquals(1, bookManage.listAllBooks().size());
+    }
+
+    @Test
+    public void testUpdateBook() {
+        Book book1 = new Book("Title1", "Author1");
+        Book book2 = new Book("Title2", "Author2");
+        bookManage.addBook(book1);
+        bookManage.updateBook(0, book2);
+        assertEquals("Title2", bookManage.listAllBooks().get(0).getTitle());
+    }
+
+    @Test
+    public void testDeleteBook() {
+        Book book = new Book("Title", "Author");
+        bookManage.addBook(book);
+        bookManage.deleteBook(0);
+        assertEquals(0, bookManage.listAllBooks().size());
+    }
+
+    @Test
+    public void testDeleteAllBooks() {
+        Book book1 = new Book("Title1", "Author1");
+        Book book2 = new Book("Title2", "Author2");
+        bookManage.addBook(book1);
+        bookManage.addBook(book2);
+        bookManage.deleteAllBooks();
+        assertEquals(0, bookManage.listAllBooks().size());
+    }
+
+    @Test
+    public void testListAllBooks() {
+        Book book1 = new Book("Title1", "Author1");
+        Book book2 = new Book("Title2", "Author2");
+        bookManage.addBook(book1);
+        bookManage.addBook(book2);
+        assertEquals(2, bookManage.listAllBooks().size());
+    }
+}

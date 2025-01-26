@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="BookManageTest" project="main" tests="5" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="main.BookManageTest" time="0.0" displayname="BookManageTest" uniqueid="[engine:junit-vintage]/[runner:main.BookManageTest]">
+    <testcase name="testAddBook" classname="main.BookManageTest" time="0.0" displayname="testAddBook" uniqueid="[engine:junit-vintage]/[runner:main.BookManageTest]/[test:testAddBook(main.BookManageTest)]"/>
+    <testcase name="testDeleteAllBooks" classname="main.BookManageTest" time="0.0" displayname="testDeleteAllBooks" uniqueid="[engine:junit-vintage]/[runner:main.BookManageTest]/[test:testDeleteAllBooks(main.BookManageTest)]"/>
+    <testcase name="testUpdateBook" classname="main.BookManageTest" time="0.0" displayname="testUpdateBook" uniqueid="[engine:junit-vintage]/[runner:main.BookManageTest]/[test:testUpdateBook(main.BookManageTest)]"/>
+    <testcase name="testListAllBooks" classname="main.BookManageTest" time="0.0" displayname="testListAllBooks" uniqueid="[engine:junit-vintage]/[runner:main.BookManageTest]/[test:testListAllBooks(main.BookManageTest)]"/>
+    <testcase name="testDeleteBook" classname="main.BookManageTest" time="0.0" displayname="testDeleteBook" uniqueid="[engine:junit-vintage]/[runner:main.BookManageTest]/[test:testDeleteBook(main.BookManageTest)]"/>
+  </testsuite>
+</testrun>

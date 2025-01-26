@@ -1,0 +1,64 @@
+package main;
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+public class SimpleMathTest {
+    private SimpleMath math = new SimpleMath();
+
+    @Test
+    void testAddPositiveNumbers() {
+        assertEquals(5, math.add(2, 3));
+    }
+
+    @Test
+    void testAddNegativeNumbers() {
+        assertEquals(-1, math.add(-2, 1));
+    }
+
+    @Test
+    void testSubtractPositiveNumbers() {
+        assertEquals(1, math.subtract(3, 2));
+    }
+
+    @Test
+    void testSubtractNegativeNumbers() {
+        assertEquals(-5, math.subtract(-2, 3));
+    }
+
+    @Test
+    void testMultiplyPositiveNumbers() {
+        assertEquals(6, math.multiply(2, 3));
+    }
+
+    @Test
+    void testMultiplyNegativeNumbers() {
+        assertEquals(6, math.multiply(-2, -3));
+    }
+
+    @Test
+    void testDividePositiveNumbers() {
+        assertEquals(2.0, math.divide(6, 3), 0.001);
+    }
+
+    @Test
+    void testDivideNegativeNumbers() {
+        assertEquals(2.0, math.divide(-6, -3), 0.001);
+    }
+
+    @Test
+    void testDivideByZero() {
+        Exception exception = assertThrows(ArithmeticException.class, () -> {
+            math.divide(1, 0);
+        });
+        assertEquals("Division by zero is not allowed", exception.getMessage());
+    }
+
+    @Test
+    void testDivideZeroByZero() {
+        Exception exception = assertThrows(ArithmeticException.class, () -> {
+            math.divide(0, 0);
+        });
+        assertEquals("Division by zero is not allowed", exception.getMessage());
+    }
+}
